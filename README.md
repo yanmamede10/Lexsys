@@ -17,7 +17,6 @@
 python manage.py runserver
 
 API:
-----------
 pegando token para conseguir usar a API, use o usuário admin pode ser usado
 
 POST /api/token/
@@ -27,4 +26,4 @@ POST /api/token/
 }
 
 em qualquer requisição para endpoints autenticados (clientes, contratos, contas, consultas...), envie o header de autorização:
-----------
+
