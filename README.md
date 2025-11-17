@@ -27,6 +27,4 @@ POST /api/token/
 }
 
 em qualquer requisição para endpoints autenticados (clientes, contratos, contas, consultas...), envie o header de autorização:
-
-Authorization: Bearer TOKEN_AQUI
 ----------
