@@ -1,0 +1,14 @@
+#register-contract-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#register-contract-container input[type='submit'] {
+    margin-top: 1%;
+    background-color: var(--main);
+}
+
+#register-contract-container h2 {
+    margin: 1.5% 0 0 0;
+}

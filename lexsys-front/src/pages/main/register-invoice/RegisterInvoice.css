@@ -1,0 +1,10 @@
+#register-invoice-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#register-invoice-container input[type='submit'] {
+    margin-top: 1%;
+    background-color: var(--main);
+}

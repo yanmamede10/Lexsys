@@ -1,0 +1,40 @@
+#sidebar-main {
+    max-width: 250px;
+    background-color: var(--support);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.1s ease-in-out;
+}
+
+#sidebar-main.shown {
+    transition: visibility 0.15s linear;
+    visibility: visible;
+    width: 100%;
+}
+
+#sidebar-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar-main button {
+    background-color: var(--support);
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+
+    cursor: pointer;
+}
+
+#sidebar-main .chosen-sub-button,
+#sidebar-main .chosen-super-button {
+    background-color: lightgray;
+}
+
+#sidebar-main button:hover,
+#sidebar-main .chosen-parent-button {
+    background-color: var(--emphasis);
+}

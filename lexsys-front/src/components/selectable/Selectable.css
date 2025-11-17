@@ -1,0 +1,40 @@
+.selectable input[type="checkbox"],
+.selectable input[type="radio"] {
+    visibility: hidden;
+    display: flex;
+    height: 0;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+.selectable .span-container {
+    margin-right: 2.25%;
+    min-width: 15px;
+}
+
+.selectable p {
+    color: var(--emphasis);
+    margin: 0;
+    padding: 0;
+}
+
+.selectable:has(input[type='checkbox']:checked) p,
+.selectable:has(input[type='radio']:checked) p {
+    color: var(--main);
+}
+
+.selectable .span-container>span {
+    display: flex;
+    box-sizing: border-box;
+    height: 11px;
+    width: 11px;
+    border: 1px solid var(--emphasis);
+    border-radius: 50%;
+}
+
+.selectable input[type='checkbox']:checked+.span-container>span,
+.selectable input[type='radio']:checked+.span-container>span {
+    border: 1px solid var(--main);
+    background-color: var(--main);
+}

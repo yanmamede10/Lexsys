@@ -1,0 +1,19 @@
+#main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-header {
+    display: flex;
+}
+
+#main-content {
+    display: flex;
+    flex: 1;
+}
+
+#main-block {
+    display: flex;
+    flex: 1;
+    margin: 0 2.5%;
+}

@@ -1,0 +1,73 @@
+#login-container {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: var(--secondary);
+    margin: 0;
+    padding: 0;
+    color: var(--main);
+}
+
+#login-container .logo {
+    margin-top: 50px;
+    height: 10%;
+    width: 10%;
+}
+
+#login-container .form-container {
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--main);
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+#login-container .form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#login-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#login-container input[type="text"],
+#login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#login-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 75%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+}
+
+#login-container input[type="submit"] {
+    background-color: var(--emphasis);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 1%;
+}
+
+#login-container input[type="submit"]:hover {
+    background-color: var(--main);
+}
+
+#login-container img:not(.logo) {
+    width: 24px;
+    height: 24px;
+}

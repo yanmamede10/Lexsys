@@ -1,0 +1,18 @@
+{
+    "sidebar_super_button": {
+        "CLIENTE": "clients",
+        "CONTA": "invoices",
+        "CONTRATO": "contracts",
+        "DASHBOARD": "dashboard",
+        "RELATORIO": "report",
+        "CONSULTA": "queries"
+    },
+    "page_index": {
+        "CLIENTE_REGISTRO": "clients-registration",
+        "CONSULTA_GERAL": "query-general",
+        "CONTA_REGISTRO": "invoices-registration",
+        "CONTRATO_REGISTRO": "contracts-registration",
+        "DASHBOARD": "dashboard",
+        "RELATORIO": "report"
+    }
+}

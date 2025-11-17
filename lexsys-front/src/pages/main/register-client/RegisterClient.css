@@ -1,0 +1,82 @@
+#register-client-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#register-client-form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#register-client-submit {
+    margin-top: 1%;
+    background-color: var(--main);
+}
+
+#register-client-form label:not(.hidden)+label {
+    margin-left: 5%;
+}
+
+#register-client-form label:has(input[name="address"]) {
+    width: 250%;
+}
+
+#register-client-form label.sideways:has(input[type="radio"]) p {
+    color: var(--emphasis);
+}
+
+#register-client-form label.sideways:has(input[type="radio"]:checked) p {
+    color: var(--main);
+}
+
+#register-client-form .hidden {
+    display: none;
+}
+
+#register-client-form .first-line {
+    width: auto;
+}
+
+#register-client-form .first-line label {
+    text-transform: capitalize;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#register-client-form .first-line label+label {
+    margin-left: 1.5%;
+}
+
+#register-client-form .first-line label p {
+    margin-left: 5%;
+}
+
+#register-client-form input[type=radio] {
+    visibility: hidden;
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+#register-client-form .first-line span {
+    height: 10px;
+    width: 12.89px;
+    border: 1px solid var(--emphasis);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#register-client-form input[type=radio]+span {
+    border: 1px solid var(--emphasis);
+}
+
+#register-client-form input[type=radio]:checked+span {
+    border: 1px solid var(--main);
+    background-color: var(--main);
+}

@@ -1,0 +1,11 @@
+#root {
+  background-color: var(--secondary);
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+#app-container {
+  margin: 0;
+  padding: 0;
+}

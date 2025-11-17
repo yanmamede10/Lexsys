@@ -1,0 +1,81 @@
+{% extends "admin/base_site.html" %}
+{% load humanize %}
+{% block content %}
+<div class="report-container">
+    <header>
+        <h1>Relatório Financeiro</h1>
+        <h3>{{ date }}</h3>
+    </header>
+
+    <ul>
+        {% for person in report_people %}
+        <li>
+            <div class="head">
+                <h1>{{ person.name }}</h1>
+                <h3>{{ person.address }}</h3>
+                <h4>
+                    Residencial: {{ person.residencial_phone_number|default:"-" }} -
+                    Celular: {{ person.cellphone_number|default:"-" }}
+                </h4>
+            </div>
+
+            <table border="1" cellspacing="0" cellpadding="6" width="100%">
+                <thead>
+                    <tr>
+                        <th>Contrato</th>
+                        <th>Vencimento</th>
+                        <th>Valor</th>
+                        <th>Situação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for overdue in person.overdues %}
+                    <tr>
+                        <td>{{ overdue.contrato }}</td>
+                        <td>{{ overdue.data_vencimento|date:"d/m/Y" }}</td>
+                        <td>R$ {{ overdue.valor|floatformat:2|intcomma }}</td>
+                        <td>{{ overdue.get_situacao_display }}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr style="background:#f0f0f0;font-weight:bold;">
+                        <td colspan="2" align="right">Total:</td>
+                        <td colspan="2">R$ {{ person.total_value|floatformat:2|intcomma }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <footer>
+        <h1>Spereta Empreendimentos</h1>
+        <h3>Relatório gerado por: Lexsys</h3>
+    </footer>
+</div>
+
+<style>
+    .report-container {
+        font-family: "Arial", sans-serif;
+        margin: 40px;
+    }
+    header, footer {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    table {
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    th, td {
+        padding: 6px 10px;
+        text-align: left;
+    }
+    th {
+        background: #dfe3ee;
+    }
+</style>
+
+<script>
+    window.onload = () => window.print();
+</script>
+{% endblock %}
